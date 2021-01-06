@@ -30,4 +30,4 @@ if __name__ == '__main__':
     for img in image_list:
         data = get_data(img)
         req = requests.post(url=url, data=data)
-        print('http://' + str(req.text))
+        print(str(req.text))

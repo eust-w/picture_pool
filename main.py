@@ -23,7 +23,7 @@ def get_frame():
     file_paths = os.path.join(file_path, file_name)
     with open(file_paths, "wb") as f:
         f.write(img)
-        return '{}:5555/eus/v1/show/{}'.format(ip, file_name)
+        return 'http://{}:5555/eus/v1/show/{}'.format(ip, file_name)
 
 
 @app.route("/eus/v1/show/<string:filename>", methods=['get'])
