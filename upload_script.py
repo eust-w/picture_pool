@@ -2,6 +2,7 @@
 # -- coding: utf-8 --
 # @Author : longtao.wu
 # @Email: eustancewu@gmail.com
+import os
 import argparse
 import base64
 import sys
@@ -20,8 +21,12 @@ image_list = args.source
 
 
 def get_data(_img):
-    with open(_img, "rb") as f:
-        file = f.read()
+    if os.path.isfile(_img):
+        with open(_img, "rb") as f:
+            file = f.read()
+            encode_f = base64.b64encode(file)
+    else:
+        file = requests.get(_img).content
         encode_f = base64.b64encode(file)
     return encode_f
 
@@ -30,4 +35,4 @@ if __name__ == '__main__':
     for img in image_list:
         data = get_data(img)
         req = requests.post(url=url, data=data)
-        print(str(req.text))
+        print("http://"+str(req.text))
