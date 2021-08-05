@@ -1,4 +1,4 @@
-[回到首页](http://longtao.fun)
+[回到首页](http://longtao.fun) ->
 [项目列表](http://longtao.fun/product/product.html)
 
 ### 简单介绍
@@ -115,5 +115,6 @@ systemctl enable spp
 
 1.  在你的修改upload_script.py 中的ip为你搭建的服务端ip（默认的172.20.18.38是我在0.10搭建好的）；
 2.  在你的markdown 编辑器按照以下操作文件->偏好设置->图像->custom上传服务，在命令里填写`python3 upload_script.py的绝对路径 -i 你的服务ip地址  -s` 例如`python3 /home/longtao/workspace/projects/picture_pool/upload_script.py -i 172.20.18.38 -s`
+    ![](https://longtao.fun/picture_pool/img_1.png)
 3.  选择插入图片时上传图片，勾选，本地和网络，点击验证上传服务，如下为成功验证
-
+    ![](https://longtao.fun/picture_pool/img_2.png)
