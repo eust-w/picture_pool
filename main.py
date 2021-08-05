@@ -19,14 +19,14 @@ app = Flask(__name__)
 def get_frame():
     upload_file = request.data
     img = base64.b64decode(upload_file)
-    file_name = '{}.png'.format(uuid.uuid1())
+    file_name = str(uuid.uuid1())
     file_paths = os.path.join(file_path, file_name)
     with open(file_paths, "wb") as f:
         f.write(img)
         return 'http://{}:5555/eus/v1/show/{}'.format(ip, file_name)
 
 
-@app.route("/eus/v1/show/<string:filename>", methods=['get'])
+@app.route("/eus/v1/show/<string:filename>", methods=['GET'])
 def show(filename):
     file_paths = os.path.join(file_path, filename)
     f = open(file_paths, "rb").read()
