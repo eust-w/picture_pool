@@ -1,4 +1,4 @@
-[回到首页](http://longtao.fun) ->
+[首页](http://longtao.fun) ->
 [项目列表](http://longtao.fun/product/product.html)
 
 ### 简单介绍
