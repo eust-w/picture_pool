@@ -1,5 +1,5 @@
 [首页](http://longtao.fun) ->
-[项目列表](http://longtao.fun/product/product.html)
+[项目列表](http://longtao.fun/product)
 
 ### 简单介绍
 
